@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Chat</title>
+    <link rel="icon" href="img/IC.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chatRoom.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/client.js" defer></script>
+</head>
+<body>
+    <header class="title">
+        <h1 class="IC">Instant Chat</h1>
+    </header>
+    <div class="screenChat">
+        <section class="message-and-response">
+            <div class="message-container" id="message-chat-container"></div>
+        <form id="message-sending">
+            <input type="text" class="sending" id="message-to-send" name="message" placeholder="Write your message here..." autofocus = "true" ><button type="submit" class="sending" id="send-btn"><img src="img/new_send.png" alt="send" height="15px"></button>
+        </form>
+        </section>
+        <section class="manuel">
+            <h3 id="room-name">Room</h3>
+            <p class="room-man">You are in the <strong id="room-strong"></strong> room ! <br>
+                Don't be afraid to suggest anything you want, to improve the chat &#128521 via the email below.
+            </p>
+            <button id="leave-btn">Leave&#128075;&#127996;</button>
+        </section>
+    </div>
+    <footer class="copyright">
+        <blockquote class="quote">"Distance means so little,when someone means so much"</blockquote>
+        <p class="author"> Made by <strong>Sanda Mandresy</strong></p>
+        <p class="link">Email: <a href="mailto:ic.project.san@gmail.com">ic.project.san@gmail.com</a></p>
+    </footer>
+</body>
+</html>

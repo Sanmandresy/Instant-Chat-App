@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Chat</title>
+    <link rel="icon" href="img/IC.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header class="title">
+        <h1 class="IC">Instant Chat</h1>
+    </header>
+    <div class="screenChat">
+        <p class="text-intro" id="id-intro">Welcome to Instant Chat ! &#129303<br>
+            You can &#128172 with your friends through different rooms.
+        </p>
+        <form id="login-form" action="chatRoom.html">
+            <div class="login"><label for="username">Username: </label><input type="text" class="info" id="username" name="username" required></div> 
+            <div class="login"><label for="room">Room: </label><input type="text" class="info" id="room" name="room" value="Global&#127758;" placeholder="Global&#127758;"></div> 
+            <button type="submit" id="join-btn">Join</button>
+        </form>
+        <p class="notice">If you don't choose a room, you'll be redirected in the Global room</p>
+    </div>
+    <footer class="copyright">
+        <blockquote class="quote">"Distance means so little,when someone means so much"</blockquote>
+        <p class="author"> Made by <strong>Sanda Mandresy</strong></p>
+        <p class="link">Email: <a href="mailto:ic.project.san@gmail.com">ic.project.san@gmail.com</a></p>
+    </footer>
+</body>
+</html>

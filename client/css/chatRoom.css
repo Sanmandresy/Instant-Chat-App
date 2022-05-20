@@ -1,0 +1,354 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Ubuntu Mono', monospace !important;
+}
+body{
+    background-color: darkslateblue;
+    color: white;
+    text-shadow: rgb(88, 73, 184) 2px 3px;
+    font-family: 'Ubuntu Mono', monospace;
+    overflow: hidden;
+}
+
+.title{
+    width:100%;
+    text-align: center;
+    font-size: clamp(1.8em, 2.3em, 2.7em);
+    font-family: 'Ubuntu Mono', monospace;
+    width: max-content;
+    margin: auto;
+}
+.IC{
+    margin:6px 0;
+    padding: 0;
+    position: relative;
+}
+.screenChat {
+    font-size: clamp(1.1em, 1.4em, 2.5em);
+    position: relative;
+    font-weight: lighter;
+    text-shadow: rgb(111, 101, 206) 1px 0.9px;
+    border:solid rgb(43, 33, 109) 8px;
+    box-shadow: rgb(23, 17, 76) 8px 3px;
+    width:80%;
+    border-radius: 25px;
+    max-height:520px;
+    height:500px;
+    margin:auto;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+#message-chat-container{
+    width: 100%;
+    border-radius: 25px;
+    height:92.1%;
+    overflow-y: auto;
+}
+#message-chat-container::-webkit-scrollbar{
+    width: 8px;
+}
+#message-chat-container::-webkit-scrollbar-thumb{
+    background-color: rgb(23, 17, 76);
+    border-radius: 25px;
+}
+#message-chat-container::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(111, 101, 206);
+}
+#message-sending{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+#message-to-send{
+    border:solid rgb(43, 33, 109) 3px;
+    background-color:darkslateblue ;
+    box-shadow: rgb(23, 17, 76) 2px 2px;
+    text-shadow: rgb(111, 101, 206) 1.3px 1px;
+    outline:none;
+    height: 22px;
+    padding:2px 8px;
+    width:78%;
+    border-radius: 25px;
+    color: white;
+    padding: auto;
+    padding-left: 5px;
+    font-size: clamp(0.4em, 0.7em, 1.3em);
+}
+#message-to-send::placeholder{
+    color: white;
+    opacity:0.1;
+}
+#send-btn{
+    border:solid rgb(43, 33, 109) 3px;
+    background-color:darkslateblue;
+    text-shadow: rgb(111, 101, 206) 1px 2px;
+    box-shadow: rgb(23, 17, 76) 2px 2px;
+    color: white;
+    border-radius: 15px;
+    font-size: clamp(0.4em, 0.7em, 1.3em);
+    width:20%;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: rgb(111, 101, 206) 1px 1.5px;
+}
+.copyright a{
+    color:white;
+    text-decoration: none;
+}
+.copyright a:hover{
+    color: black;
+}
+
+.copyright blockquote{
+    font-size: clamp(0.5em, 1.3em, 1.6em);
+    margin-bottom: 12px;
+    animation-name: displayed;
+    animation-duration: 1583ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes displayed {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.copyright p{
+    font-size: clamp(0.5em,1.1em,1.3em);
+}
+.message-box{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: clamp(0.4em, 0.8em, 1.3em);
+    width: 60%;
+    background-color: whitesmoke;
+    border: solid rgb(216, 213, 213) 2px;
+    margin-top: 2.5px;
+    box-shadow: rgb(205, 201, 201) 2px 2px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding: 2.5px 0;
+    padding-left: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-shadow: none;
+    animation: pop 50ms linear;
+}
+
+@keyframes pop {
+    0%{
+        transform: translateX(-4px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.message-box::-webkit-scrollbar{
+    height: 5px;
+}
+.message-box::-webkit-scrollbar-thumb{
+    background-color: rgb(225, 221, 221);
+    border-radius: 25px;
+}
+
+
+.message-and-response{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.manuel{
+    background-color: darkslateblue;
+    height: 99.2%;
+    width: 30%;
+    border-radius: 15px;
+    border:solid rgb(43, 33, 109) 2px;
+    text-shadow: none;
+    text-align: center;
+}
+
+#room-name{
+    font-size: clamp(0.7em, 0.9em, 1.4em);
+    color: white;
+    text-align: center;
+    margin: 5px 2px;
+    text-shadow: rgb(88, 73, 184) 2px 2px;
+}
+.room-man{
+    color: white;
+    font-size: clamp(0.4em, 0.75em, 1.2em);
+}
+#leave-btn{
+    margin-top: 100%;
+    border:solid rgb(43, 33, 109) 3px;
+    background-color:darkslateblue;
+    text-shadow:none;
+    box-shadow: rgb(23, 17, 76) 2px 2px;
+    color: rgba(255, 255, 255,0.7);
+    padding: 3px 3px;
+    border-radius: 25px;
+    font-size: clamp(0.4em, 0.7em, 1.3em);
+    width:max-content;
+    text-shadow: rgb(111, 101, 206) 1px 1px;
+}
+
+#leave-btn:hover{
+    transform: translateY(-1.5px);
+    box-shadow: rgb(23, 17, 76) 2px 4px;
+}
+h4{
+    font-weight: 400;
+    font-size: clamp(0.4em, 1.02em, 1.3em);
+    text-shadow:  rgb(192, 191, 191) 1px 1.2px;
+}
+
+
+/*Responsive*/
+
+/*1*/
+@media screen and (max-width:420px) and (min-width:285px){
+    .title{
+        font-size: clamp(0.4em, 1.1em, 1.3em);
+    }
+    .screenChat{
+        width:92%;
+        font-size: clamp(1.1em, 1.2em, 1.4em);
+        max-height: 400px;
+        height:380px;
+    }
+    .copyright blockquote{
+        font-size: clamp(0.5em, 1.2em, 1.4em);
+    }
+    .copyright p{
+        font-size: clamp(0.5em,0.9em,1.1em);
+    }
+    #leave-btn{
+        margin-top: 2%;
+    }
+}
+
+/*2*/
+@media screen and (max-width:282px) and (min-width:105px) {
+    .title{
+        font-size: clamp(0.4em, 1.3em, 1.5em);
+    }
+    .screenChat{
+        width:90%;
+        font-size: clamp(0.6em, 0.9em, 1.2em);
+        max-height: 440px;
+        height:420px;
+    }
+    .copyright blockquote{
+        font-size: clamp(0.5em, 1.1em, 1.3em);
+    }
+    .copyright p{
+        font-size: clamp(0.5em,0.8em,1.1em);
+    }
+    #message-chat-container{
+        height: 90.8%;
+        border-radius: 0;
+    }
+}
+
+/*3*/
+@media screen and (max-width:550px) and (min-width:440px) {
+    .screenChat{
+        width:90%;
+        font-size: clamp(0.6em, 1.2em, 1.2em);
+        max-height: 440px;
+        height:420px;
+    }
+    .copyright p{
+        font-size: clamp(0.5em,0.9em,1.2em);
+    }
+}
+
+/*4*/
+@media screen and (max-width:890px) and (min-width:560px) {
+    .title{
+        font-size: clamp(1.4em, 2.9em, 3.4em);
+    }
+    .screenChat{
+        width: 95%;
+        font-size: clamp(1.2em, 1.8em, 2.4em);
+    }
+    .copyright blockquote{
+        font-size: clamp(1.2em, 2.1em, 2.5em);
+    }
+    .copyright p{
+        font-size: clamp(1em,1.6em,1.8em);
+    }
+    #leave-btn{
+        margin-top: 50%;
+    }
+}
+
+/*5*/
+@media screen and (max-width:930px) and (min-width:900px) {
+    .title{
+        font-size: clamp(2em, 3.4em, 3.6em);
+    }
+    .screenChat{
+        width: 95%;
+        height: 700px;
+        max-height: 720px;
+       font-size: clamp(1.5em,2.3em,3em);
+    }
+    #leave-btn{
+        margin-top: 50%;
+    }
+    .copyright blockquote{
+        font-size: clamp(2em,2.3em,2.6em);
+    }
+    .copyright p{
+        font-size: clamp(1.5em,1.7em,2em);
+    }
+    .manuel{
+        height: 99.5%;
+    }
+    #message-chat-container{
+        height: 98%;
+    }
+    #message-sending input{
+        height: 28px;
+    }
+}
+
+/*6*/
+@media screen and (max-width:1300px) and (min-width:940px) {
+    .title{
+        font-size: clamp(1.5em, 2em, 2.5em);
+    }
+    .screenChat{
+        width: 95%;
+        height: 380px;
+        max-height: 400px;
+    }
+    #leave-btn{
+        margin-top: 50%;
+    }
+    .copyright blockquote{
+        font-size : clamp(1.3em,1.6em,2em)
+    }
+    .copyright p{
+        font-size: clamp(0.5em,0.9em,1.2em);
+    }
+}

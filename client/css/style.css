@@ -1,0 +1,354 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Ubuntu Mono', monospace !important;
+}
+body{
+    background-color: darkslateblue;
+    color: white;
+    text-shadow: rgb(88, 73, 184) 2px 3px;
+    font-family: 'Ubuntu Mono', monospace;
+    overflow: hidden;
+}
+
+.title{
+    width:100%;
+    text-align: center;
+    font-size: clamp(1.8em, 2.3em, 2.7em);
+    font-family: 'Ubuntu Mono', monospace;
+    width: max-content;
+    margin: auto;
+}
+.IC{
+    margin:6px 0;
+    padding: 0;
+    position: relative;
+}
+
+.IC::before,.IC::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.IC::before{
+    background-color: darkslateblue;
+    animation: 
+    typewriter 6s steps(12) 1s forwards;
+}
+
+.IC::after{
+    width: 0.1em;
+    border-radius: 15px;
+    background-color: rgb(59, 51, 116);
+    animation: 
+    typewriter 6s steps(12) 998ms forwards,
+    blink 750ms steps(12) infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left : 100%
+    }
+}
+
+@keyframes blink {
+    to{
+        background: transparent;
+    }
+}
+
+.screenChat {
+    font-size: clamp(1.1em, 1.4em, 2.5em);
+    position: relative;
+    font-weight: lighter;
+    text-align: center;
+    text-shadow: rgb(111, 101, 206) 1px 0.9px;
+    border:solid rgb(43, 33, 109) 8px;
+    box-shadow: rgb(23, 17, 76) 8px 3px;
+    width:80%;
+    border-radius: 25px;
+    max-height:520px;
+    height:500px;
+    margin:auto;
+    background: white;
+    color: black;
+}
+
+.text-intro{
+    margin: 20px 0;
+}
+
+#login-form{
+    margin: 60px auto;
+    font-size: 0.8em;
+    text-align: center;
+}
+.login{
+    margin-bottom: 25px;
+}
+
+.login input{
+    border:solid rgb(43, 33, 109) 3px;
+    background-color:darkslateblue ;
+    box-shadow: rgb(23, 17, 76) 2px 2px;
+    outline:none;
+    height: 22px;
+    padding:2px 8px;
+    width:22%;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    font-size: clamp(0.5em, 0.9em, 1.3em);
+}
+
+
+#room{
+    margin-left: 32px;
+    text-align: center;
+}
+#room::placeholder{
+    color: white;
+    opacity: 0.2;
+}
+
+#join-btn{
+    margin-top: 8px;
+    border:solid rgb(43, 33, 109) 3px;
+    background-color:darkslateblue;
+    text-shadow: rgb(111, 101, 206) 1px 2px;
+    box-shadow: rgb(23, 17, 76) 2px 2px;
+    outline:none;
+    height: 35px;
+    width: 65px;
+    border-radius: 25px;
+    text-align: center;
+    color:white;
+    font-size: clamp(0.5em, 0.9em, 1.3em);
+}
+#join-btn:hover{
+    transform: translateY(-1.5px);
+    box-shadow: rgb(23, 17, 76) 2px 4px;
+}
+.notice{
+    font-size: clamp(0.3em, 0.7em, 1.4em);
+    padding: 0 3px;
+    margin-top: 120px;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: rgb(111, 101, 206) 1px 2px;
+}
+.copyright a{
+    color:white;
+    text-decoration: none;
+}
+.copyright a:hover{
+    color: black;
+}
+
+
+.copyright blockquote{
+    font-size: clamp(0.5em, 1.3em, 1.6em);
+    margin-bottom: 12px;
+    animation-name: displayed;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes displayed {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.copyright p{
+    font-size: clamp(0.5em,1.1em,1.3em);
+}
+
+/*Responsive*/
+
+
+@media screen and (max-width:420px) and (min-width:285px){
+    .title{
+        font-size: 1.6em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        font-size: 1.2em;
+        padding: 0 3px;
+        width: 90%;
+        height: 400px;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 1.2em;
+    }
+    .copyright p{
+        font-size: 0.9em;
+    }
+    
+}
+
+@media screen and (max-width:281px) {
+    .title{
+        font-size: 1.3em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        text-shadow: none;
+        font-size: 0.9em;
+        padding: 0 3px;
+        width: 90%;
+        height: 400px;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 0.9em;
+    }
+    .copyright p{
+        font-size: 0.7em;
+    }
+    
+}
+
+@media screen and (max-width:545px) and (min-width:425px) {
+    .title{
+        font-size: 1.7em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        text-shadow: none;
+        font-size: 1.3em;
+        padding: 0 3px;
+        width: 90%;
+        height: 400px;
+    }
+    #login-form{
+        margin: 50px 0;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 1.3em;
+    }
+    .copyright p{
+        font-size: 1.1em;
+    }
+}
+
+@media  screen and (max-width:822px) and (min-width:550px) {
+    .title{
+        font-size: 2.3em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        text-shadow: none;
+        font-size: 1.9em;
+        padding: 0 3px;
+        width: 90%;
+        height: 500px;
+    }
+    #login-form{
+        margin: 50px 0;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 2.1em;
+    }
+    .copyright p{
+        font-size: 1.6em;
+    }
+}
+@media screen and (max-width:925px) and (min-width:825px) {
+    .title{
+        font-size: 2.9em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        text-shadow: none;
+        font-size: 2.3em;
+        padding: 0 3px;
+        width: 90%;
+        height: 600px;
+    }
+    #login-form{
+        margin: 50px 0;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 2.3em;
+    }
+    .copyright p{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width:1028px) and (min-width:935px) and (max-height:601px) {
+    .title{
+        font-size: 1.9em;
+    }
+    .notice{
+        margin-top: 0;
+    }
+    .screenChat{
+        text-shadow: none;
+        font-size: 1.3em;
+        padding: 0 3px;
+        width: 90%;
+        height: 400px;
+    }
+    #login-form{
+        margin: 50px 0;
+    }
+    .copyright{
+        margin-top: 25px;
+        text-shadow: rgb(88, 73, 184) 1px 1.6px;
+    }
+    .copyright blockquote{
+        font-size: 1.1em;
+    }
+    .copyright p{
+        font-size: 0.7em;
+    }
+}
