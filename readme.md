@@ -1,6 +1,7 @@
 # Instant Chat 😁
+To test the app : [Instant Chat] (https://ic-san-project.herokuapp.com/)
 
-You can clone this repo to test the app.
+You can also clone this repo to test the app.
 
 ```sh
 git clone https://github.com/Sanmandresy/Instant-Chat-App.git
