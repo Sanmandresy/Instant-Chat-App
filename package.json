@@ -1,0 +1,21 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "An instant chat made from scratch",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "go": "nodemon server.js"
+  },
+  "keywords": ["heroku","chat"],
+  "author": "Sanda Mandresy",
+  "license": "ISC",
+  "dependencies": {
+    "@socket.io/admin-ui": "^0.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "moment": "^2.29.2",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.1"
+  }
+}
